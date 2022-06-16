@@ -2,8 +2,7 @@ const { defaultTheme } = require('vuepress')
 const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
-  lang: 'zh-CN',
-  title: '你好， VuePress ！',
+  title: 'OASIS Develop Center',
   description: '这是我的第一个 VuePress 站点',
   plugins: [
     searchPlugin({
