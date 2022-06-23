@@ -31,7 +31,7 @@ By integrating Particle Auth into your project, your users can experience the fo
 * **Signature:** a full signature service.
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-ce5dc40f5a6c9c8e0a0e01f646c5fcb06dad3cd8%2Fsign.jpg?alt=media )
-<center>Approve & Sign</center>
+Approve & Sign
   
 ---
   

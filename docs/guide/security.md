@@ -43,7 +43,7 @@ This includes signing, derivation, and even generation. There is no complete key
 Key shares are continuously modified without modifying the key itself. It is computationally efficient and can be performed very frequently, thus forcing the attacker to compromise both parties at virtually the same time in order to obtain key material.
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-977fc3a8e9495df090d9877b0454458f2a57decc%2Fos-key-shares.png?alt=media )
-<center>Next-Gen Key Management System</center>
+Next-Gen Key Management System
   
 **Particle Network** includes a secure MPC implementation of the following algorithms:
   
@@ -59,7 +59,7 @@ As a result, Particle Network provides a **secure, easy-to-use, and trusted** ke
   
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-aa5b2c309d97620d21a33c301b72a27bc8b9e1b4%2Fezgif.com-gif-maker.gif?alt=media )
-<center>Particle Network TSS</center>
+Particle Network TSS
   
 The Threshold Signature Scheme (TSS) is a cryptographic primitive for distributed key generation and signing. The use of TSS in Particle Network is a new paradigm that can provide numerous benefits, especially in terms of security.
   

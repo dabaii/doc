@@ -28,98 +28,39 @@ module.exports = {
     ],
     // 侧边栏数组
     // 所有页面会使用相同的侧边栏
+    // collapsable: false,
     sidebar: [
       // SidebarItem
       {
         text: '指南',
-        link: '/',
+        link: '/'
       },
-
-      // {
-      //   text: 'Introduction',
-      //   link: '/list/introduction.md'
-      // },
-      // {
-      //   text: 'Get Started',
-      //   link: '/list/getStarted.md'
-      // },
-      // {
-      //   text: 'Security',
-      //   link: '/list/security.md'
-      // },
-      // {
-      //   text: 'Available Networks',
-      //   link: '/list/availableNetworks.md'
-      // },
-      // {
-      //   text: 'DASHBOARD',
-      //   link: '/list/DASHBOARD.md'
-      // },
-      // {
-      //   text: 'AUTH SERVICE',
-      //   link: '/list/AUTH_SERVICE.md'
-      // },
-      // {
-      //   text: 'WALLET SERVICE',
-      //   link: '/list/WALLET_SERVICE.md'
-      // },
-      // {
-      //   text: 'NFT SERVICE',
-      //   link: '/list/NFT_SERVICE.md'
-      // },
-      // {
-      //   text: 'NODE SERVICE',
-      //   link: '/list/NODE_SERVICE.md'
-      // },
-      // {
-      //   text: 'RESOURCES',
-      //   link: '/list/RESOURCES.md'
-      // },
-
       {
         text: '技术文档',
         collapsible: true,
         children: [
           {
             text: 'Introduction',
-            children: ['/list/introduction.md']
+            link: '/guide/introduction.md'
           },
           {
             text: 'Get Started',
-            children: ['/list/getStarted.md']
+            link: '/guide/getStarted.md'
           },
           {
             text: 'Security',
-            children: ['/list/security.md']
+            link: '/guide/security.md'
           },
           {
             text: 'Available Networks',
-            children: ['/list/availableNetworks.md']
+            link: '/guide/availableNetworks.md'
           },
-          {
-            text: 'DASHBOARD',
-            children: ['/list/DASHBOARD.md']
-          },
-          {
-            text: 'AUTH SERVICE',
-            children: ['/list/AUTH_SERVICE.md']
-          },
-          {
-            text: 'WALLET SERVICE',
-            children: ['/list/WALLET_SERVICE.md']
-          },
-          {
-            text: 'NFT SERVICE',
-            children: ['/list/NFT_SERVICE.md']
-          },
-          {
-            text: 'NODE SERVICE',
-            children: ['/list/NODE_SERVICE.md']
-          },
-          {
-            text: 'RESOURCES',
-            children: ['/list/RESOURCES.md']
-          }
+          '/guide/DASHBOARD.md',
+          '/guide/AUTH_SERVICE.md',
+          '/guide/WALLET_SERVICE.md',
+          '/guide/NFT_SERVICE.md',
+          '/guide/NODE_SERVICE.md',
+          '/guide/RESOURCES.md',
         ]
       },
       {
@@ -127,15 +68,6 @@ module.exports = {
         collapsible: true,
         children: [
           // SidebarItem
-          // {
-          //   text: '介绍',
-          //   link: '/2',
-          //   collapsible: true,
-          // },
-          // {
-          //   text: '介绍2',
-          //   children: ['/a'],
-          // },
           {
             text: '如何编写文档',
             children: ['/markdown.md'],
