@@ -6,13 +6,13 @@ Particle Network also provides MPC (Multi-Party Computation)-based threshold sig
   
 ---
   
-### What is Particle Auth？
+#### What is Particle Auth？
   
 Particle Auth is a pluggable auth infrastructure for Web3.0 wallets and applications. We support mobile number and email login, providing users with a simple operating experience. Their login account is then associated with a blockchain wallet, which is secured with a "Threshold Signatures vault".
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-5cbaec450170089afd937e45445f06960137237b%2F%E9%A3%9E%E4%B9%A620220513-175911.gif?alt=media )
   
-### What does Particle Auth do?
+#### What does Particle Auth do?
   
   
 By integrating Particle Auth into your project, your users can experience the following services:
@@ -22,7 +22,7 @@ By integrating Particle Auth into your project, your users can experience the fo
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-06f303a354ea6fcbe481f17d76c6d11666651243%2F952qs-wk47v.gif?alt=media )
   
-### What Are Particle Auth's features?
+#### What Are Particle Auth's features?
   
   
 * **Speedy logins:** the log-in process is no different from that of a Web2.0 login, which greatly lowers the barriers to entry and improves user experience.
@@ -35,11 +35,11 @@ Approve & Sign
   
 ---
   
-### How Do I Integrate Particle Auth?
+#### How Do I Integrate Particle Auth?
   
 Particle Auth comes with simple SDKs that can be integrated in multiple ways to provide the best experience for your users. We support all the available chains out there, with special providers available for EVM and Solana.
   
-### 👉 Auth SDKs
+#### 👉 Auth SDKs
   
 * [👉 Server API]( )
 * [👉 Android]( )

@@ -6,7 +6,7 @@ Your one-stop wallet solution
   
 ---
   
-### What is Particle Wallet？
+#### What is Particle Wallet？
   
 **The Particle Wallet is not an independent wallet—it is a wallet infrastructure plugged into apps or wallets.**
   
@@ -14,7 +14,7 @@ With Particle Wallet, you can integrate a wallet tailored to your app's needs, w
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-b9516dc3b96f6dcf3034b480f22b25f73cceaf24%2Fqiabao%20.jpg?alt=media )
   
-### Using Particle Wallet to Build Your Wallet
+#### Using Particle Wallet to Build Your Wallet
   
 Using Particle Wallet, you have the flexibility to choose between building an app with an in-app wallet, or a standalone wallet itself. This has its advantages:
   
@@ -24,7 +24,7 @@ Using Particle Wallet, you have the flexibility to choose between building an ap
   
 * **In-app experience:** users can manage their wallets and make transactions within your app, creating a seamless experience specific to your app.
   
-### What Are Particle Wallet's features?
+#### What Are Particle Wallet's features?
   
 * **Rapid development:** we provide a complete wallet SDK with functions including transaction abilities, NFT displays and trading, signatures, etc. This reduces development time for you and ensures security for users.
   
@@ -34,11 +34,11 @@ Using Particle Wallet, you have the flexibility to choose between building an ap
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-385d25e8118cccf1a16cf85fc4117b410f8329cc%2Fqiabao2%20.jpg?alt=media )
   
-### How can I use Particle Wallet?
+#### How can I use Particle Wallet?
   
 Particle Wallet comes with simple SDKs that can be integrated in multiple ways to provide the best user experience. At present, it supports the display and trading of tokens/NFTs in the Solana and EVM ecosystems.
   
-### 👉 Wallet SDK
+#### 👉 Wallet SDK
   
 * [👉 Android]( )
 * [👉 iOS]( )

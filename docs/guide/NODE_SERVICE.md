@@ -8,25 +8,25 @@ Simplify scaling and powering your blockchain apps
   
 Particle's Node Service is your high-performance access to all major blockchains, with supercharged reliability, data correctness, and scalability.
   
-### 🚀 Fast & Reliable
+#### 🚀 Fast & Reliable
   
 * Lower latency and faster response
 * Peak reliability node services
 * Dynamic scalability
   
-### 🔥 Extended Capabilities
+#### 🔥 Extended Capabilities
   
 * Enhanced API
 * Data analysis
 * 100% data correctness
 * Rich dataset for FT & NFT Marketplaces
   
-### 🧑‍💻 Easy To Use
+#### 🧑‍💻 Easy To Use
   
 * One-line API infrastructure
 * 1,000+ engineering hours saved per year
   
-### Available Networks
+#### Available Networks
   
 Currently, we support almost all EVM compatible chains **and the Solana chain.** [For details check this 👉]( )
   
@@ -38,7 +38,7 @@ Authenticate yourself to the Particle Node Service API
   
 ---
   
-### Endpoint
+#### Endpoint
   
 **Base URL: https://api.particle.network**
   
@@ -53,7 +53,7 @@ All EVM-compatible chains' RPC URL is:
 https://api.particle.network/evm-chain/rpc
 ```
   
-### Authentication
+#### Authentication
   
 We assume you already have a [Particle Account]( ) and access to our [Dashboard]( ), where you can create projects and apps.
   
@@ -64,7 +64,7 @@ The Web3 APIs require **HTTP Basic Authentication:**
 | Username       | Your Project Id         |
 | Password       | Your Project Server Key |
   
-### Code Example
+#### Code Example
   
 ```
 <!-- Javascript -->

@@ -12,7 +12,7 @@ Here, we'll provide you with a step-by-step guide on the Particle Dashboard.
   
 ---
   
-###   Getting Started
+####   Getting Started
   
   
   
@@ -23,12 +23,12 @@ Log in to the dashboard with your **email.** After you enter the **verification 
   
 Once you enter the Particle Dashboard, you'll have access to the following features:
   
-####    👉 Manage Projects
+#####    👉 Manage Projects
   
   
   
   
-####    👉 Manage Apps
+#####    👉 Manage Apps
   
   
   
@@ -39,14 +39,14 @@ Once you enter the Particle Dashboard, you'll have access to the following featu
   
 ---
   
-### The Relationship Between Projects and Apps
+#### The Relationship Between Projects and Apps
   
   
   
 ![图片](https://1871216767-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FF6uqWeUD7kwCZqSpBtVz%2Fuploads%2Fgit-blob-ff5ae55474823d3d584d8e46ca05a516ac81ecbc%2F%E5%9B%BE1.jpg?alt=media )
   
   
-###    Create Project
+####    Create Project
   
   
   
@@ -64,7 +64,7 @@ Once the project has been created successfully, you will receive an auto-generat
 After creating the project, you may subsequently add apps to it.
   
   
-###    Edit Project
+####    Edit Project
   
   
   
@@ -86,7 +86,7 @@ Here, we'll detail the process of adding apps to your project.
   
 ---
   
-### Adding an Android App
+#### Adding an Android App
   
   
   
@@ -98,7 +98,7 @@ Here, we'll detail the process of adding apps to your project.
    * Package Name: often referred to as an application ID, it uniquely identifies your app on the device and in the Google Play Store. Find your app's **package name** in your module (app-level) Gradle file, usually app/build.gradle (e.g. com.yourcompany.yourproject). The package name value is case-sensitive.
    * Save your app information
   
-###    Adding an iOS App
+####    Adding an iOS App
   
   
   
@@ -110,7 +110,7 @@ Here, we'll detail the process of adding apps to your project.
    * Apple Bundle ID: this uniquely identifies an app in Apple's ecosystem. Open your project in Xcode, select the top-level app in the project navigator, then select the **General** tab. The value of the **Bundle Identifier** is the **Bundle ID** (e.g. com.yourcompany.yourproject). The Bundle ID value is case-sensitive.
    * ave your app information
   
-###    Adding a Web App
+####    Adding a Web App
   
   
   
