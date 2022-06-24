@@ -1,39 +1,32 @@
 # NFT SERVICE
-  
+
 ## Introduction
-  
+
 Create, manage and distribute NFTs in your dApp
-  
+
 ---
-  
-#### What is Particle NFT Service？
-  
-Particle NFT Service provides SDKs and APIs for developers can quickly and securely build NFT-related functions into your dApp, supporting various functions such as casting, managing, and operating NFTs. At the same time, an NFT marketplace can be built quickly to support a variety of sales forms, meeting the launch and transaction needs of various NFT projects.
-  
+
+#### What is Oasis NFT Service？
+
+Oasis NFT Service provides SDKs and APIs for developers can quickly and securely build NFT-related functions into your dApp, supporting various functions such as casting, managing, and operating NFTs. At the same time, an NFT marketplace can be built quickly to support a variety of sales forms, meeting the launch and transaction needs of various NFT projects.
+
 ---
-  
+
 #### One-stop NFT Service solution
-  
-The Particle NFT service supports the NFT minting from a variety of file types; it also has the ability to support batch minting. During mint, NFTs will be marked with different attributes and rarity levels. 
+
+The Oasis NFT service supports the NFT minting from a variety of file types; it also has the ability to support batch minting. During mint, NFTs will be marked with different attributes and rarity levels.
 You can also build your own tools with our APIs. We're happy to feature what you've built here.
-  
+
 ---
-  
-#### What are the advantages of using Particle MarketPlace API?
-  
-* Accessible in minutes: call on the Particle NFT service API to easily integrate marketplace functionalities into your dApp
-  
-* Seamless experience: users can easily buy and sell NFTs without leaving your dApp
-  
-* Abundant sales forms: including one-off sales and bidding purchases; then, the gradual integration of sales offers, lotteries, as well as other purchasing methods
-  
-* Multichain support: Solana, Ethereum, BSC, Polygon, and Avalanche are currently supported
-  
-* Top-level security: Particle Network conducts security control over the entire process of users' withdrawal of NFTs, the transaction process, and NFT deposit to ensure the security of user assets, allowing developers to focus on dApp development
-  
-* Analytics: collect data and user feedback regarding your NFT sales with just a few lines of code (currently in development)
-  
----
+
+#### What are the advantages of using Oasis MarketPlace API?
+
+- Accessible in minutes: call on the Oasis NFT service API to easily integrate marketplace functionalities into your dApp
+- Seamless experience: users can easily buy and sell NFTs without leaving your dApp
+- Abundant sales forms: including one-off sales and bidding purchases; then, the gradual integration of sales offers, lotteries, as well as other purchasing methods
+- Multichain support: Solana, Ethereum, BSC, Polygon, and Avalanche are currently supported
+- Top-level security: Oasis Meta conducts security control over the entire process of users' withdrawal of NFTs, the transaction process, and NFT deposit to ensure the security of user assets, allowing developers to focus on dApp development
+- Analytics: collect data and user feedback regarding your NFT sales with just a few lines of code (currently in development)
 
 ## Solana NFT Service
 
@@ -48,7 +41,7 @@ We implemented a series of APIs, from mint NFT to building markets.
 #### Demo
 
 We strongly recommend that you run our demo, which contains a complete use of the NFT API.
-See the demo: https://github.com/Particle-Network/particle-solana-nft-web-demo
+See the demo: https://github.com/Oasis-Network/Oasis-solana-nft-web-demo
 
 ### NFT RPC API
 
@@ -62,20 +55,16 @@ Mint, Update, Sell, Buy, Settle, Withdraw..., Easily build a fully functional Ma
 
 **Parameters:**
 
-```
-<string> - the public key of account to mint, as base-58 encoded string
-<object> - metadata. Follow The Non-Fungible Standard
-    you can also offer a metadata_uri which fetch and parse as a metadata JSON instead of a metadata object.
-```
+- \<string> - the public key of account to mint, as base-58 encoded string
+- \<object> - metadata. Follow The Non-Fungible Standard
+  - you can also offer a metadata_uri which fetch and parse as a metadata JSON instead of a metadata object.
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    mint: <string> - the mint address of the NFT
-    mintAssociatedTokenAccount: <string> - The address of the account where you place the NFT
-    transaction: <object> - the transaction struct is to be signed with the NFT owner
-```
+- \<object> - a JSON object containing:
+  - mint: \<string> - the mint address of the NFT
+  - mintAssociatedTokenAccount: \<string> - The address of the account where you place the NFT
+    - transaction: \<object> - the transaction struct is to be signed with the NFT owner
 
 Request Example
 
@@ -111,7 +100,7 @@ const metadataUri = 'https://gateway.pinata.cloud/ipfs/QmVJ8tG8nuqCk8QeZmBWkQxJK
 
 (async () => {
     // use metadata
-    const response1 = await axios.post('https://api.particle.network/solana/rpc', {
+    const response1 = await axios.post('https://api.Oasis.network/solana/rpc', {
         chainId: 103,
         method: 'NFT_mint',
         params: ['8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ', metadata],
@@ -125,7 +114,7 @@ const metadataUri = 'https://gateway.pinata.cloud/ipfs/QmVJ8tG8nuqCk8QeZmBWkQxJK
     console.log(response1.data);
 
     // use url
-    const response2 = await axios.post('https://api.particle.network/solana/rpc', {
+    const response2 = await axios.post('https://api.Oasis.network/solana/rpc', {
         chainId: 103,
         method: 'NFT_mint',
         params: ['8FE27ioQh3T7o22QsYVT5Re8NnHFqmFNbdqwiF3ywuZQ', {
@@ -169,31 +158,27 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the mint address of NFT you owned
-<object> - fields from the data of NFT metadata
-    name: <string>
-    symbol: <string>
-    uri: <string>
-    sellerFeeBasisPoints: <int>
-    newUpdateAuthority: <string>
-    primarySaleHappened: <boolean>
-    isMutable: <string>
-```
+- \<string> - the mint address of NFT you owned
+- \<object> - fields from the data of NFT metadata
+  - name: \<string>
+  - symbol: \<string>
+  - uri: \<string>
+  - sellerFeeBasisPoints: \<int>
+  - newUpdateAuthority: \<string>
+    -primarySaleHappened: \<boolean>
+    -isMutable: \<string>
 
 Results:
 
-```
-<object> - a JSON object containing:
-    transaction: <object> - the transaction struct is to be signed with the NFT owner
-```
+- \<object> - a JSON object containing:
+  - transaction: \<object> - the transaction struct is to be signed with the NFT owner
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const mint = '77jsJBjKMi5MsKYoSBS2a2HVQ9nd7ULTZUVqKZyhRFzj';
 const auth = {
     username: 'Your Project Id',
@@ -238,24 +223,20 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the mint address of NFT you owned
-<object>: optional 
-    parseMetadataUri: <boolean, default: false> If true, the API will parse the metadata's uri that can get the image url and other info.
-```
+- \<string> - the mint address of NFT you owned
+- \<object>: optional
+  - parseMetadataUri: \<boolean, default: false> If true, the API will parse the metadata's uri that can get the image url - and other info.
 
 Results:
 
-```
-    <object> - a JSON object about metadata
-```
+- \<object> - a JSON object about metadata
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const mint = '77jsJBjKMi5MsKYoSBS2a2HVQ9nd7ULTZUVqKZyhRFzj';
 const auth = {
     username: 'Your Project Id',
@@ -342,31 +323,27 @@ Response Example
 
 #### 🔥 NFT_setCreatorVerified
 
-> It is important to check this field to ensure the authenticity of the creator. 
-Without certification, creators can't share royalties.
+> It is important to check this field to ensure the authenticity of the creator.
+> Without certification, creators can't share royalties.
 
 **Parameters:**
 
-```
-<string> - the public key of the creator account
-<object> 
-    mint: <string> - the NFT mint address associated with the creator
-    verified: <boolean> - if verified or not (default true)
-```
+- \<string> - the public key of the creator account
+- \<object>
+  - mint: \<string> - the NFT mint address associated with the creator
+  - verified: \<boolean> - if verified or not (default true)
 
 Results:
 
-```
-object> - a JSON object containing:
-    transaction: <object> - the transaction struct is to be signed with the creator
-```
+- \<object> - a JSON object containing:
+  - transaction: \<object> - the transaction struct is to be signed with the creator
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const mint = '77jsJBjKMi5MsKYoSBS2a2HVQ9nd7ULTZUVqKZyhRFzj';
 const auth = {
     username: 'Your Project Id',
@@ -410,24 +387,20 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the public key of the account to become the market manager
-```
+- \<string> - the public key of the account to become the market manager
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    store: <string> - the address of the market
-    transaction: <object> - the transaction struct is to be signed with the market manager
-```
+- \<object> - a JSON object containing:
+  - store: \<string> - the address of the market
+  - transaction: \<object> - the transaction struct is to be signed with the market manager
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const auth = {
     username: 'Your Project Id',
     password: 'Your Project Server Key',
@@ -468,22 +441,18 @@ Response Example
 
 **Parameters:**
 
-```
-string> - the public key of the market manager account
-```
+- \<string> - the public key of the market manager account
 
 **Results:**
 
-```
-<boolean> - whether the market has initialized
-```
+- \<boolean> - whether the market has initialized
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 
 const auth = {
     username: 'Your Project Id',
@@ -500,6 +469,7 @@ const auth = {
     console.log(JSON.stringify(response.data));
 })();
 ```
+
 Response Example
 
 ```
@@ -519,25 +489,21 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the public key of the market manager account
-    <object> - config
-        creator: <string> - the public key of the creator account 
-        activated: <boolean> - whether the creator is activated
-```
+- \<string> - the public key of the market manager account
+  - \<object> - config
+    - creator: \<string> - the public key of the creator account
+    - activated: \<boolean> - whether the creator is activated
 
 **Results:**
 
-```
-    transaction: <object> - the transaction struct is to be signed with the market manager
-```
+- transaction: \<object> - the transaction struct is to be signed with the market manager
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 
 const auth = {
     username: 'Your Project Id',
@@ -581,23 +547,19 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the public key of the market manager account
-<string> - the public key of the creator account
-```
+- \<string> - the public key of the market manager account
+- \<string> - the public key of the creator account
 
 **Results:**
 
-```
-<boolean> - whether the creator is activated
-```
+- \<boolean> - whether the creator is activated
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 
 const auth = {
     username: 'Your Project Id',
@@ -634,21 +596,17 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the public key of the seller account
-<object> 
-    store: <string> - the address of the market, see NFT_initializeStore
-    mint: <string> - the mint address of the NFT
-    instantSalePrice: <number> - the price you want to sell (lamports)
-```
+- \<string> - the public key of the seller account
+- \<object>
+  - store: \<string> - the address of the market, see NFT_initializeStore
+  - mint: \<string> - the mint address of the NFT
+  - instantSalePrice: \<number> - the price you want to sell (lamports)
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    auctionManager: string> - the address of the auction manager to manager this sale
-    transactions: <[object]> - the transaction struct array is to be signed with the seller
-```
+- \<object> - a JSON object containing:
+  - auctionManager: \<string> - the address of the auction manager to manager this sale
+  - transactions: \<\[object]> - the transaction struct array is to be signed with the seller
 
 > It is important to make sure that all transactions are executed in array order.
 
@@ -660,7 +618,7 @@ Request Example
 const axios = require('axios');
 const { LAMPORTS_PER_SOL } = require('@solana/web3.js');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const store = 'DvrXAsPw8X8vqFpgfVhWypDeM3sboiBs5iVn3FKNmLWy';
 const mint = '77jsJBjKMi5MsKYoSBS2a2HVQ9nd7ULTZUVqKZyhRFzj';
 const instantSalePrice = 0.1 * LAMPORTS_PER_SOL;
@@ -751,25 +709,21 @@ Response Example
 
 **Parameters:**
 
-```
-<object> 
-    mint: <string> - the mint address of the NFT
-    auctionManager: <string> - the address of the auction manager
-```
+- \<object>
+  - mint: \<string> - the mint address of the NFT
+  - auctionManager: \<string> - the address of the auction manager
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    transaction: <object> - the transaction struct is to be signed with the seller
-```
+- \<object> - a JSON object containing:
+  - transaction: \<object> - the transaction struct is to be signed with the seller
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const auctionManager = 'AaQEaBX67R4eJLmvN96izgmwYPNebzKKbt746tfNXQJT';
 const mint = '6HeKjfSt9rYWatGmL4g8sqQd2hoU8mPXkGFhFkEzzka7';
 const auth = {
@@ -815,24 +769,20 @@ Response Example
 > Buy NFT which is listed in the market
 
 > When the buyer buys the NFT, the seller needs to settle first to get the money.
-See NFT_settle
+> See NFT_settle
 
 **Parameters:**
 
-```
-<string> - the public key of the buyer (can be anyone)
-<object> 
-    mint: <string> - the mint address of the NFT
-    auctionManager: <string> - the address of the auction manager
-```
+- \<string> - the public key of the buyer (can be anyone)
+- \<object>
+  - mint: \<string> - the mint address of the NFT
+  - auctionManager: \<string> - the address of the auction manager
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    mintAssociatedTokenAccount: <string> - The address of the account where the buyer places the NFT
-    transactions: <[object]> - the transaction struct array is to be signed with the buyer
-```
+- \<object> - a JSON object containing:
+  - mintAssociatedTokenAccount: \<string> - The address of the account where the buyer places the NFT
+  - transactions: \<\[object]> - the transaction struct array is to be signed with the buyer
 
 > It is important to make sure that all transactions are executed in array order.
 
@@ -843,7 +793,7 @@ Request Example
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const mint = '5NwzTC2zNdDzvKSc1CaKKFm1HNZ79KNop4yuJajRBPQg';
 const auctionManager = '5QzJprZ2o5M2kbmBoZX2mCuNGWzMkMpjKMxWUHv3WzGf';
 const auth = {
@@ -904,33 +854,28 @@ Response Example
 > Settle your NFT auction and transfer sol to your sol token account
 
 > Sol token account is not your native account.
-It is a specially generated account for the auction, and all the sol obtained from the auction will be transferred to this account first.
-If you want to withdraw from sol token account to your native account, see NFT_withdraw.
-
+> It is a specially generated account for the auction, and all the sol obtained from the auction will be transferred to this account first.
+> If you want to withdraw from sol token account to your native account, see NFT_withdraw.
 
 **Parameters:**
 
-```
-<string> - Stakeholders in NFTs can be creators or sellers
-<object> 
-    mint: <string> - the mint address of the NFT
-    auctionManager: <string> - the address of the auction manager
-```
+- \<string> - Stakeholders in NFTs can be creators or sellers
+- \<object>
+  - mint: \<string> - the mint address of the NFT
+  - auctionManager: \<string> - the address of the auction manager
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    nativeMintAssociatedTokenAccount: <string> - the address of your sol token account
-    transaction: <object> - the transaction struct is to be signed with the stakeholder
-```
+- \<object> - a JSON object containing:
+  - nativeMintAssociatedTokenAccount: \<string> - the address of your sol token account
+  - transaction: \<object> - the transaction struct is to be signed with the stakeholder
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const auctionManager = '6YKFom9PerD8pcWY7KMd1uX5MkYDFTcQ9H4vjN5jLW51';
 const mint = '2J48iL7bW1d7WR7meBsRkhwmhP5jHHVuwo8A3nEcxrAR';
 const auth = {
@@ -979,23 +924,19 @@ Response Example
 
 **Parameters:**
 
-```
-<string> - the public key of the account to withdraw
-```
+- \<string> - the public key of the account to withdraw
 
 **Results:**
 
-```
-<object> - a JSON object containing:
-    transaction: <object> - the transaction struct is to be signed with the withdrawn account
-```
+- \<object> - a JSON object containing:
+  - transaction: \<object> - the transaction struct is to be signed with the withdrawn account
 
 Request Example
 
 ```
 const axios = require('axios');
 
-const SOLANA_RPC_URL = 'https://api.particle.network/solana/rpc';
+const SOLANA_RPC_URL = 'https://api.Oasis.network/solana/rpc';
 const auth = {
     username: 'Your Project Id',
     password: 'Your Project Server Key',
