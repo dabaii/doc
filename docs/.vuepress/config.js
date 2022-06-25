@@ -31,12 +31,12 @@ module.exports = {
     // collapsable: false,
     sidebar: [
       // SidebarItem
+      // {
+      //   text: '指南',
+      //   link: '/'
+      // },
       {
-        text: '指南',
-        link: '/'
-      },
-      {
-        text: '技术文档',
+        text: 'Docs',
         collapsible: true,
         children: [
           {
@@ -63,36 +63,31 @@ module.exports = {
           '/guide/RESOURCES.md',
         ]
       },
+      // {
+      //   text: '常用介绍',
+      //   collapsible: true,
+      //   children: [
+      //     // SidebarItem
+      //     {
+      //       text: '如何编写文档',
+      //       children: ['/markdown.md'],
+      //     }
+      //   ],
+      // },
+      // {
+      //   text: 'API',
+      //   collapsible: true,
+      //   children: [
+      //     {
+      //       text: '如何接入api',
+      //       children: ['/api.md'],
+      //     }
+      //   ],
+      // },
       {
-        text: '常用介绍',
-        collapsible: true,
-        children: [
-          // SidebarItem
-          {
-            text: '如何编写文档',
-            children: ['/markdown.md'],
-          }
-        ],
-      },
-      {
-        text: 'API',
-        collapsible: true,
-        children: [
-          {
-            text: '如何接入api',
-            children: ['/api.md'],
-          }
-        ],
-      },
-      {
-        text: 'SDK',
-        collapsible: true,
-        children: [
-          {
-            text: '下载和使用SDK',
-            children: ['/sdk.md'],
-          }
-        ],
+        text: 'Download SDK(Gitbub)',
+        link: 'https://www.github.com/',
+       
       }
     ],
   }),
